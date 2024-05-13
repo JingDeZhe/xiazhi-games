@@ -1,0 +1,29 @@
+{
+  "name": "xiazhi-games",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@iconify-json/tabler": "^1.1.111",
+    "@unocss/transformer-compile-class": "^0.60.0",
+    "@unocss/transformer-directives": "^0.60.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "naive-ui": "^2.38.2",
+    "sass": "^1.77.1",
+    "unocss": "^0.60.0",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-components": "^0.27.0",
+    "vite": "^5.2.8"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

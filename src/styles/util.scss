@@ -1,0 +1,47 @@
+@font-face {
+  font-family: lxgw;
+  src: local('LXGW WenKai'), url('/fonts/LXGWWenKaiGBScreen.woff2');
+}
+
+body {
+  font-family: lxgw, serif;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+a {
+  outline-color: transparent;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  &:link {
+    --at-apply: text-sky;
+  }
+
+  &:visited {
+    --at-apply: text-purple;
+  }
+
+  &:focus,
+  &:hover {
+    border-bottom: 1px solid;
+  }
+
+  &:active {
+    --at-apply: text-red;
+  }
+}
+
+.all-center {
+  --at-apply: flex items-center justify-center;
+}
+
+.full-ctn {
+  --at-apply: h-full overflow-hidden;
+}
