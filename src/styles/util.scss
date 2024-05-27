@@ -45,3 +45,7 @@ a {
 .full-ctn {
   --at-apply: h-full overflow-hidden;
 }
+
+.col-ctn {
+  --at-apply: flex flex-col overflow-hidden;
+}
