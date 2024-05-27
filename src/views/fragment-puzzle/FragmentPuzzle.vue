@@ -227,6 +227,7 @@ const readFileAs = (file, type = 'text') => {
         ></polygon>
         <circle v-for="c in tmpFragmentPoints" :cx="c[0]" :cy="c[1]" r="1" fill="#292C3430"></circle>
       </svg>
+      <n-input v-model:value="picture.title" placeholder="名称" class="picture-title"></n-input>
     </div>
   </div>
 </template>
@@ -240,21 +241,21 @@ const readFileAs = (file, type = 'text') => {
   }
   .canvas-ctn {
     --px1v: 1px;
-    --at-apply: relative m-2 overflow-hidden;
-    width: 600px;
-    height: 600px;
+    --size: 600px;
+    --at-apply: relative m-2 overflow-hidden flex flex-col gap-1 w-max h-max;
     outline: 1px solid #ccc;
     .refer-img {
       --at-apply: absolute opacity-30 overflow-hidden object-contain;
       z-index: -1;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: var(--size);
+      height: var(--size);
       object-position: 50% 50%;
     }
     svg {
-      --at-apply: w-full h-full;
+      width: var(--size);
+      height: var(--size);
 
       polygon {
         &.active {
@@ -262,6 +263,17 @@ const readFileAs = (file, type = 'text') => {
           stroke: #303030;
         }
       }
+    }
+
+    .picture-title {
+      --n-border: none !important;
+      --n-border-hover: none !important;
+      --n-border-focus: none !important;
+      --n-box-shadow-focus: none !important;
+      --at-apply: text-center;
+      border: none;
+      border-radius: 0;
+      border-top: 1px solid #ccc;
     }
   }
 }
