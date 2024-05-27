@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../views/self-split/SelfSplit.vue'),
     },
     {
+      path: '/fragment-puzzle',
+      name: 'fragment-puzzle',
+      component: () => import('../views/fragment-puzzle/FragmentPuzzle.vue'),
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

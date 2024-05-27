@@ -1,7 +1,13 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import AppContent from './components/AppContent.vue'
 </script>
 
 <template>
-  <RouterView />
+  <n-modal-provider>
+    <n-notification-provider>
+      <n-message-provider>
+        <AppContent></AppContent>
+      </n-message-provider>
+    </n-notification-provider>
+  </n-modal-provider>
 </template>

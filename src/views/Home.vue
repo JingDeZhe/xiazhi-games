@@ -17,6 +17,12 @@
             <router-link to="/self-split"> 前往 </router-link>
           </div>
         </n-collapse-item>
+        <n-collapse-item title="碎片拼图" name="3">
+          <div>
+            一个精巧的，好看的碎片拼图。
+            <router-link to="/fragment-puzzle"> 前往 </router-link>
+          </div>
+        </n-collapse-item>
       </n-collapse>
     </n-card>
   </div>
