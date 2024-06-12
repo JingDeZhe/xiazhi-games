@@ -19,6 +19,7 @@ const info = ref({
   readonly: false,
   referImg: '',
   croppedReferImg: '',
+  colorBrush: '#666666ff',
 })
 
 const referImgSrc = computed(() => info.value.croppedReferImg || info.value.referImg)
@@ -63,6 +64,16 @@ const handleSelectFragment = (e) => {
       activeFragment.value = t
     }
     e.stopPropagation()
+  }
+}
+
+const handleApplyFragment = (e) => {
+  if (info.value.readonly) return
+  const { id } = e.target.dataset
+  const index = picture.value.fragments.findIndex((v) => v.id === id)
+  if (index !== -1) {
+    const t = picture.value.fragments[index]
+    t.fill = info.value.colorBrush
   }
 }
 
@@ -185,6 +196,9 @@ const readFileAs = (file, type = 'text') => {
           <n-form-item path="readonly" label="只读">
             <n-switch v-model:value="info.readonly"></n-switch>
           </n-form-item>
+          <n-form-item path="colorBrush" label="颜色画笔">
+            <n-color-picker v-model:value="info.colorBrush"></n-color-picker>
+          </n-form-item>
           <template v-if="activeFragment">
             <n-form-item label="颜色">
               <n-color-picker v-model:value="activeFragment.fill"></n-color-picker>
@@ -200,7 +214,7 @@ const readFileAs = (file, type = 'text') => {
           <n-space justify="start">
             <n-button @click="handleSaveTempCanvas">暂存</n-button>
             <n-button @click="handleLoadTempCanvas">暂取</n-button>
-            <n-button @click="handleSaveCanvas">保存</n-button>
+            <n-button @click="handleSaveCanvas">导出</n-button>
             <n-upload
               accept="application/json"
               :max="1"
@@ -222,6 +236,7 @@ const readFileAs = (file, type = 'text') => {
           :points="getPoints(p)"
           :fill="p.fill"
           @click="handleSelectFragment"
+          @contextmenu.prevent="handleApplyFragment"
           :data-id="p.id"
           :class="{ active: activeFragment === p }"
         ></polygon>
