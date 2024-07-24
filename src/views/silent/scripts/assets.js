@@ -1,4 +1,4 @@
-import { Attribute } from './game'
+import { Attribute } from './struct'
 
 export const genAttributes = () => {
   return {
