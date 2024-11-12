@@ -1,4 +1,4 @@
-@import './util.scss';
+@use './util.scss';
 
 .action-right {
   --at-apply: flex gap-1 justify-right;

@@ -10,28 +10,28 @@
   },
   "dependencies": {
     "cropperjs": "^1.6.2",
-    "dayjs": "^1.11.12",
+    "dayjs": "^1.11.13",
     "file-saver": "^2.0.5",
     "idb-keyval": "^6.2.1",
     "lodash-es": "^4.17.21",
-    "nanoid": "^5.0.7",
-    "pinia": "^2.1.7",
-    "vue": "^3.4.33",
-    "vue-router": "^4.4.0"
+    "nanoid": "^5.0.8",
+    "pinia": "^2.2.6",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@iconify-json/tabler": "^1.1.118",
+    "@iconify-json/tabler": "^1.2.7",
     "@types/file-saver": "^2.0.7",
     "@types/lodash-es": "^4.17.12",
-    "@unocss/transformer-compile-class": "^0.61.5",
-    "@unocss/transformer-directives": "^0.61.5",
-    "@vitejs/plugin-vue": "^5.1.0",
-    "naive-ui": "^2.39.0",
-    "sass": "^1.77.8",
-    "unocss": "^0.61.5",
-    "unplugin-auto-import": "^0.18.2",
-    "unplugin-vue-components": "^0.27.3",
-    "vite": "^5.3.4"
+    "@unocss/transformer-compile-class": "^0.64.0",
+    "@unocss/transformer-directives": "^0.64.0",
+    "@vitejs/plugin-vue": "^5.1.5",
+    "naive-ui": "^2.40.1",
+    "sass": "^1.80.6",
+    "unocss": "^0.64.0",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^5.4.11"
   },
-  "packageManager": "pnpm@9.6.0"
+  "packageManager": "pnpm@9.12.3"
 }
