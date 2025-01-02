@@ -3,5 +3,15 @@
     "activityBar.background": "#94466d",
     "titleBar.activeBackground": "#94466d",
     "titleBar.activeForeground": "#F9FAF7"
+  },
+  "marscode.chatLanguage": "cn",
+  "marscode.codeCompletionPro": {
+    "enableCodeCompletionPro": false
+  },
+  "marscode.enableInlineCommand": true,
+  "marscode.enableCodelens": {
+    "enableInlineDocumentation": true,
+    "enableInlineUnitTest": false,
+    "enableInlineExplain": true
   }
 }
