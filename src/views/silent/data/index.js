@@ -8,6 +8,6 @@ export const letterList = [
         "markdown-it"
       ]
     },
-    "contentPath": "/posts/01.md"
+    "contentPath": "/posts/silent/01.md"
   }
 ];

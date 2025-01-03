@@ -20,13 +20,13 @@ const postsData = files.map((file) => {
   const { frontmatter, content } = parseMarkdown(filePath)
 
   // 将内容部分写入单独的文件
-  const contentFilePath = path.join(__dirname, `../../public/posts/${file}`)
+  const contentFilePath = path.join(__dirname, `../../public/posts/silent/${file}`)
   fs.writeFileSync(contentFilePath, content)
 
   return {
     slug: file.replace('.md', ''),
     frontmatter,
-    contentPath: `/posts/${file}`, // 懒加载路径
+    contentPath: `/posts/silent/${file}`, // 懒加载路径
   }
 })
 
