@@ -13,5 +13,6 @@
     "enableInlineDocumentation": true,
     "enableInlineUnitTest": false,
     "enableInlineExplain": true
-  }
+  },
+  "window.title": "XZG"
 }

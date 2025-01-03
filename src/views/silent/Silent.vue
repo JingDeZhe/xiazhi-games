@@ -1,24 +1,24 @@
 <script setup>
-import MarkdownView from '@/components/MarkdownView.vue'
-import { letterList } from './data/letters'
 import { ref } from 'vue'
+import { letterList } from './data'
+import MarkdownView from '@/components/MarkdownView.vue'
 
 const activeLetter = ref('')
-const viewLetter = async (letterLoader) => {
-  const data = await letterLoader()
-  console.log(data)
-  activeLetter.value = data.content
+const viewLetter = async (letter) => {
+  const data = await fetch(letter.contentPath).then((d) => d.text())
+  activeLetter.value = data
 }
 </script>
 
 <template>
-  <div class="letter-list">
-    <div class="letter-item" v-for="(item, index) in letterList" :key="index">
-      <NButton @click="viewLetter(item)">{{ index }}</NButton>
+  <div class="silent">
+    <div class="letter-list">
+      <div class="letter" v-for="(letter, index) in letterList" :key="index">
+        <span @click="viewLetter(letter)">{{ letter.frontmatter.title }}</span>
+      </div>
     </div>
+    <MarkdownView :content="activeLetter"></MarkdownView>
   </div>
-
-  <MarkdownView :content="activeLetter" />
 </template>
 
 <style lang="scss"></style>
